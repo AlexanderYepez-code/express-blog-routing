@@ -1,5 +1,5 @@
 import express from "express"
-import gameArray from "./post.js"
+import gameArray from "../post.js"
 
 const router = express.Router();
 
@@ -16,7 +16,7 @@ router.get ("/", (req, res)=> {
 router.get("/:id",(req,res)=>{
     const id = parseInt(req.params.id);
     const resp = gameArray.find(game => game.id===id);
-    res.json (resp)
+    res.json(resp)
 })
 
 //STORE
@@ -26,7 +26,7 @@ router.post("/", (req,res)=>{
 
 //UPDATE
 router.put("/:id", (req,res)=>{
-    const id =req.params.id;
+    const id = req.params.id;
     res.send("aggiorna gioco n."+ id)
 })
 

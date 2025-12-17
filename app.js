@@ -9,7 +9,7 @@ app.get("/", (req, resp) =>{
     resp.json(gameArray)
 });
 
-app.use("games", gamesRouter);
+app.use("/games", gamesRouter);
 
 app.listen(port, function(){
     console.log("Il server sta ascoltando sulla porta " + port)

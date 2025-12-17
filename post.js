@@ -36,4 +36,4 @@ const posts = [
   }
 ];
 
-export default posts
+export default posts;
